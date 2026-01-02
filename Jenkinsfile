@@ -2,12 +2,6 @@ pipeline {
     agent any
 
     stages {
-        stage('Checkout') {
-            steps {
-                git credentialsId: 'github-creds',
-                    url: 'https://github.com/darshanaramesh/terraform-eks-jenkins.git'
-            }
-        }
 
         stage('Terraform Init') {
             steps {
